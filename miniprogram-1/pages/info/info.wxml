@@ -1,0 +1,42 @@
+<!--pages/info/info.wxml-->
+<!-- <text>pages/info/info.wxml</text> -->
+<view id="info">
+
+  <view id="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="4000" duration='2000' circular='true'
+            indicator-color='#fff' indicator-active-color='rgb(75, 21, 202)' class="swiper-container">
+        <swiper-item wx:for="{{background}}" wx:key="*this" class="swiper-wrapper">
+          <view class="swiper-item">
+            <image src="{{item}}"></image>
+          </view>
+        </swiper-item>
+    </swiper>
+  </view>
+  
+  <view id="infos">
+    <view class='show names'>{{infos.name}}</view>
+    <view class='show phone'>
+      <text>手机</text>
+      <text class="text">{{infos.phone}}</text>
+      <button size='mini' open-type='getPhoneNumber'>拨打</button>
+    </view>
+    <view class='show mail'>
+      <text>邮箱</text>
+      <text class="text">{{infos.mail}}</text>
+      <button size='mini'>复制</button>
+    </view>
+    <view class='show zhi'>
+      <text>职业</text>
+      <text class="text">{{infos.zhi}}</text>
+      <button size='mini'>复制</button>
+    </view>
+  </view>
+
+  <view id='navgita'>
+    <view class="one" wx:for="{{navgita}}" wx:key="*this">
+      <image src='{{item.url}}'></image>
+      <text>{{item.txt}}</text>
+    </view>
+  </view>
+  
+</view>

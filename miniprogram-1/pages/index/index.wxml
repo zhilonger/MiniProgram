@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称          </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <view class="toInfo" bindtap="checkInfo">查看个人信息</view>
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view class='audioContainer'>
+  <!--当前为停止状态  -->
+  <view class='audioImg' wx:if="{{isplay==false}}" bindtap='play'>
+    <image class="play" src='/pages/images/music1.png' />
+  </view>
+  <!--当前为播放状态  -->
+  <view class='audioImg'  wx:if="{{isplay==true}}" bindtap='stop'>
+    <image class="play" src='/pages/images/music2.png' />
+  </view>
+</view>
+</view>

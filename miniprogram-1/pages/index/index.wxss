@@ -1,0 +1,69 @@
+/**index.wxss**/
+.container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* background: lightblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: lightblue; */
+  margin-top: 200rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  width: 100%;
+  height: 600rpx;
+  /* margin-top: 160rpx; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  /* background: red; */
+}
+.toInfo{
+  width: 46%;
+  height: 60rpx;
+  background: rgb(32, 159, 209);
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color:#fff;
+  margin-bottom: 150rpx;
+}
+
+.audioContainer{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: right;
+}
+.play{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}

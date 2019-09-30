@@ -1,0 +1,87 @@
+/* pages/info/info.wxss */
+#info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eee;
+}
+#swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.swiper-container{
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper{
+  width: 100%;
+  height: 100%;
+}
+.swiper-item{
+  width: 100%;
+  height: 100%;
+}
+#swiper image{
+  width: 100%;
+  height: 100%;
+}
+#infos{
+  width: 90%;
+  height: 350rpx;
+  position: relative;
+  top: -40rpx;
+  background: #fff;
+  border: 1rpx solid rgb(240, 235, 235);
+  box-sizing: border-box;
+  box-shadow: 1rpx 1rpx 5rpx 5rpx rgb(199, 211, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.show{
+  width: 90%;
+  height: 60rpx;
+  /* background: red; */
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.names{
+  font-size: 40rpx;
+}
+.text{
+  flex: 1;
+  margin: 0 20rpx;
+}
+#navgita{
+  width: 90%;
+  height: 200rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-bottom: 50rpx; */
+}
+.one{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+.one>image{
+  width: 50%;
+  height: 55%;
+  margin-bottom:10rpx;
+}
