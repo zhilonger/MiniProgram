@@ -1,9 +1,13 @@
 //index.js
+
 //获取应用实例
 const app = getApp();
 //创建音频
 const myaudio = wx.createInnerAudioContext({});
+
 Page({
+  //右上角菜单栏添加转发功能
+  onShareAppMessage() { },
   data: {
     motto: '欢迎来到我的小程序',
     userInfo: {},
@@ -43,7 +47,6 @@ Page({
 
     //暂停动画
     myaudio.onPause(function () {
-      // console.log('mmp')
       wx.showToast({
         title: '已暂停',
       })
@@ -52,8 +55,6 @@ Page({
     //设置音频路径和属性
     myaudio.src = "http://vd2.bdstatic.com/mda-iicuk42aeny2vsmw/sc/mda-iicuk42aeny2vsmw.mp4";
     myaudio.autoplay = true;
-
-
 
     if (app.globalData.userInfo) {
       this.setData({
