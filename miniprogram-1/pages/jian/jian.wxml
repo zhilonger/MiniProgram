@@ -1,0 +1,32 @@
+<!--pages/jian/jian.wxml-->
+<view id="jian">
+  <view id="img">
+    <image src='/pages/images/timg4.jpg'></image>
+  </view>
+  <view id='experience'>
+    <text class="title">工作经历</text>
+    <view class="work">
+      <view wx:for="{{work}}" wx:key="*this">
+        <view class="li">
+          <view class="date">
+            <view class="border"></view>
+            <view class="">{{item.date}}</view>
+          </view>
+          <view class="company">{{item.company}}</view>
+        </view>  
+      </view>
+    </view>
+    <text class="title title2">教育经历</text>
+    <view class="work">
+      <view wx:for="{{education}}" wx:key="*this">
+        <view class="li">
+          <view class="date">
+            <view class="border"></view>
+            <view class="">{{item.date}}</view>
+          </view>
+          <view class="company">{{item.company}}</view>
+        </view>  
+      </view>
+    </view>
+  </view>
+</view>

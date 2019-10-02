@@ -1,4 +1,8 @@
 // pages/info/info.js
+
+//创建音频
+const myaudio = wx.createInnerAudioContext({});
+
 Page({
 
   /**
@@ -11,17 +15,41 @@ Page({
       { 'url': '../images/prev.png', 'txt': '嘘寒问暖' },
       { 'url': '../images/money.png', 'txt': '打笔巨款' },
       { 'url': '../images/love.png', 'txt': '●●●' }
-    ]
+    ],
+    isplay: true
+  },
+  //音频播放
+  play: function () {
+    myaudio.play();
+    console.log(myaudio.duration);
+    this.setData({ isplay: true });
+  },
+  // 音频暂停
+  stop: function () {
+    myaudio.pause();
+    this.setData({ isplay: false });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   
   onLoad: function (options) {
+
     //loading动画显示
     wx.showLoading({
       title: '加载中',
     })
+
+    //暂停动画
+    myaudio.onPause(function () {
+      wx.showToast({
+        title: '已暂停',
+      })
+    })
+
+    //设置音频路径和属性
+    myaudio.src = "http://vd2.bdstatic.com/mda-iicuk42aeny2vsmw/sc/mda-iicuk42aeny2vsmw.mp4";
+    myaudio.autoplay = true;
   },
 
   /**
